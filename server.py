@@ -25,7 +25,12 @@ while True:
            else:
              
               data = s.recv(size)
-              print data
+              if not data :
+                 print "disconnected from client"
+                 sys.exit()
+              else:
+                 print data
+    
               for sock in sock_list:
                       if sock != s and sock != fd and sock != sys.stdin: 
                             sock.send(data)

@@ -17,7 +17,7 @@ while True:
                 else: 
                     print "recived msg",data
            elif s == sys.stdin:
-                msg = raw_input(">>>")
+                msg = raw_input(">>")
                 print msg
                 fd.send(msg)
 fd.close() 
